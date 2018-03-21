@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo </title>
+</head>
+<body>
+    <header>
+        <h1>TodoList</h1>
+        <hr>
+    </header>
+    <p><a href="/todos/add">Add Todo</a></p>
+    <ul>
+{% for todo in todos %}
+    <li><a href="/todos/details/{{todo.id}}"> {{ todo.title }}</a>: {{ todo.text }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo </title>
+</head>
+<body>
+    <header>
+        <h3>Add New Todo </h3>
+    </header>
+<form action="{%url 'add' %}" method="post">
+    {% csrf_token %}  
+    <label for="title">Title</label><br>
+    <input type="text" name="title" id="title" required>
+    <br><br>
+    <label for="text">Text</label><br>
+    <textarea name="text" id="text" required></textarea>
+    <br><br>
+    <input type="submit"   value="Submit">
+</form>
+<br>
+<h6><a href="/todos/">Go Back</a></h6>
+
+</body>
+</html>
